@@ -2999,8 +2999,9 @@ function _custom_logo_header_styles() {
 		?>
 		<!-- Custom Logo: hide header text -->
 		<style id="custom-logo-css"<?php echo $type_attr; ?>>
-			<?php echo $classes; ?> {
-				position: absolute;
+			<?php echo $classes; ?> 
+			{
+				position:absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
 		</style>

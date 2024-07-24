@@ -1,40 +1,44 @@
 <?php
-function register_nav() {
-    register_nav_menus(
-        array (
-            'header' => 'Header'
-        )
-    );
 
-    register_nav_menus(
-        array (
-            'footer' => 'Footer'
-        )
-    );
 
-    register_nav_menus(
-        array (
-            '404' => '404'
-        )
-    );
+function websiteOngNuoc_theme_support() {
+    //Add dynamic title tag support 
+    add_theme_support('custom-logo');   
+    add_theme_support('WebsiteOngNuoc');
+    add_theme_support('post-thumbnails');    
 }
 
-if (! function_exists('setup')):
-    function setup() {
-        register_nav()
-        add_theme_support('post-thumbnails');
-        add_image_size('team', 475, 475, array('center', 'center'));
-    }
-endif;
+add_action('after_setup_theme', 'websiteOngNuoc_theme_support');
 
-function scripts_header() {
-    wp_enqueue_style('init', get_stylesheet_uri());
+function websiteOngNuoc_menus() {
+    $locations = array(
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items",
+    );
+    register_nav_menus($locations);
 }
 
-function scripts_footer() {
-    //wp_enqueue_script('init', get_template_directory_uri().'/js/init.js', array('jquery'));
+add_action('init', 'websiteOngNuoc_menus');
+
+
+function websiteOngNuoc_register_styles() {
+
+    $version = wp_get_theme()->get('Version');    
+    wp_enqueue_style('websiteOngNuoc-style', get_template_directory_uri() . "/style.css", array('websiteOngNuoc-bootstrap'), $version, 'all');
+    wp_enqueue_style('websiteOngNuoc-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
+    wp_enqueue_style('websiteOngNuoc-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
 }
 
-add_action('after_setup_theme', 'setup');
-add_action('wp_enqueue_scripts', 'scripts_header');
-add_action('wp_footer', 'scripts_footer');
+add_action('wp_enqueue_scripts', 'websiteOngNuoc_register_styles');
+
+function websiteOngNuoc_register_scripts() {
+    
+    wp_enqueue_script('websiteOngNuoc-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
+    wp_enqueue_script('websiteOngNuoc-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', array(), '1.16.0', true);
+    wp_enqueue_script('websiteOngNuoc-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array(), '4.4.1', true);
+    wp_enqueue_script('websiteOngNuoc-jquery',get_template_directory_uri()."/assets/js/main.js", array(), '1.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'websiteOngNuoc_register_scripts');
+
+?>
