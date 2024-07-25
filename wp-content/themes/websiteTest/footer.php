@@ -2,7 +2,7 @@
 /**
  * Footer template 
  * 
- * @package WebsiteOngNuoc
+ * @package  WebsiteTest
  */
 ?>
 

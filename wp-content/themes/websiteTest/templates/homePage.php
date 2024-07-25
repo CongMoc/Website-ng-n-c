@@ -2,7 +2,7 @@
 /**
  * HomePage Template
  * 
- * @package WebsiteOngNuoc
+ * @package  WebsiteTest
  */
 ?>
 

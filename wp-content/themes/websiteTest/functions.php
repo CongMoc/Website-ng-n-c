@@ -1,4 +1,9 @@
 <?php
+/**
+ * Function WebsiteTest
+ * 
+ * @package WebsiteTest
+ */
 
 
 function websiteOngNuoc_theme_support() {
