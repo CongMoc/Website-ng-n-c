@@ -59,7 +59,7 @@
                     );
                 ?>
 
-                <ul class=" navbar-nav flex-column text-sm-center text-md-left">
+                <!-- <ul class=" navbar-nav flex-column text-sm-center text-md-left">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span
                                 class="sr-only">(current)</span></a>
@@ -78,20 +78,20 @@
                         <a class="nav-link btn btn-primary" href="contact.html"><i
                                 class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
                     </li>
-                </ul>
+                </ul> -->
                 <hr>
                 <ul class="social-list list-inline py-3 mx-auto">
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+                    <?php 
+                        dynamic_sidebar('sidebar-1');
+                    ?>
                 </ul>
 
             </div>
+
         </nav>
     </header>
     <div class="main-wrapper">
         <header class="page-title theme-bg-light text-center gradient py-5">
-            <h1 class="heading"><?php the_title(); ?></h1>
+            <h1 class="heading"><?php the_title(); ?>
+            </h1>
         </header>
