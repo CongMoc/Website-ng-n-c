@@ -1,0 +1,59 @@
+<?php 
+/**
+ * Footer template 
+ * 
+ * @package  WebsiteOngNuoc
+ */
+?>
+
+
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section company-info">
+                <img src="path_to_logo.png" alt="Logo" class="footer-logo">
+                <p>CÔNG TY TNHH XÂY DỰNG VÀ DỊCH VỤ AQ</p>
+                <p>
+                    <span>Địa chỉ: Thôn An Điềm, Xã Định Sơn, Huyện Cẩm Giàng, Tỉnh Hải Dương, Việt Nam</span><br>
+                    <span>VPGD: 92 Nguyễn Lương Bằng, TP Hải Dương, Việt Nam</span>
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h4>Link Tắt</h4>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Danh mục</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ nhanh</a></li>
+                    <li><a href="#">Để lại liên hệ</a></li>
+                    <li><a href="#">Điều khoản</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h4>Nguồn</h4>
+                <ul>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h4>Điều khoản</h4>
+                <ul>
+                    <li><a href="#">An toàn thông tin</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>AQ MEP Projects - © 2024 All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

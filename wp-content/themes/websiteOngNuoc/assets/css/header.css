@@ -1,0 +1,80 @@
+html {
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20%;
+  background-color: #fff;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.nav-links a i {
+  font-size: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.call-button a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 5px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.call-button:hover {
+  transform: scale(1.15);
+  transition: 1s;
+}
