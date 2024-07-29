@@ -23,7 +23,6 @@ function websiteOngNuoc_theme_support() {
 }
 add_action('after_setup_theme', 'websiteOngNuoc_theme_support');
 
-
 function websiteOngNuoc_menus() {
     $locations = array(
         'header' => "Desktop Primary Left Sidebar",

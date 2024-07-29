@@ -1,6 +1,3 @@
-<?php 
-    wp_head();
-?>
 <section class="introduct">
     <h2 class="left"><b>AQ MEP</b> tự hào là nhà cung cấp 
     <span style="color: #EAB200;">dịch vụ uy tín</span> trong <span style="color: #EAB200;">lĩnh vực xây dựng</span></h2>
@@ -20,6 +17,20 @@
             <i class='bx bx-search'></i>
             <input type="text" placeholder="Bạn đang tìm gì?">
         </div>
-        <button type="submit">Search</button>
+        <button type="submit">Tìm kiếm</button>
     </div>
+    <div class="recommend_search left">
+        <span style="color: #C4C4C4;">Phổ biến:</span>
+        <span>Vật tư ống nước</span>
+        <span>Van mềm</span>
+        <span>Xây dựng nhà máy</span>
+    </div>  
+</section>
+<section class="logo-contact">
+    <?php
+        $image_url = get_asset_image_url('logos_contact.png');
+        if ($image_url) {
+            echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+        }
+    ?>
 </section>
