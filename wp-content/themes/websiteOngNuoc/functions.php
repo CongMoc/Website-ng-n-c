@@ -11,6 +11,7 @@ function websiteOngNuoc_register_styles() {
     wp_enqueue_style('websiteOngNuoc-styles', get_template_directory_uri() . "/style.css", array(), '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-box-icon', 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', array(), '2.1.4', 'all');
     wp_enqueue_style('websiteOngNuoc-footer', get_template_directory_uri() . "/assets/css/footer.css", array(), '1.0', 'all' );
+    wp_enqueue_style('websiteOngNuoc-home', get_template_directory_uri() . "/assets/css/home-page.css", array(), '1.0', 'all' );
 } 
 add_action('wp_enqueue_scripts', 'websiteOngNuoc_register_styles');
 
@@ -22,11 +23,6 @@ function websiteOngNuoc_theme_support() {
 }
 add_action('after_setup_theme', 'websiteOngNuoc_theme_support');
 
-function websiteOngNuoc_register_scripts() {
-    wp_enqueue_script('websiteOngNuoc-box-icon', 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', array(), '2.1.4', true);
-}
-add_action('wp_enqueue_scripts', 'websiteOngNuoc_register_scripts');
-
 
 function websiteOngNuoc_menus() {
     $locations = array(
@@ -37,3 +33,9 @@ function websiteOngNuoc_menus() {
 }
 
 add_action('init', 'websiteOngNuoc_menus');
+
+if (!function_exists('get_asset_image_url')) {
+    function get_asset_image_url($image_name) {
+        return get_template_directory_uri() . '/assets/images/' . $image_name;
+    }
+}

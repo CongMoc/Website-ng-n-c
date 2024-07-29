@@ -1,15 +1,13 @@
 <?php 
 	get_header();
 ?>
-<article class="container">
-    <?php
-		if (have_posts()) {
-            
-			while( have_posts() ) {
-				the_post();
-				the_content();
-			}
-		}
-	?>
-</article>
+<div class="container">
+    <div class="posts">
+        <?php
+            if (have_posts()) {
+                get_template_part( 'template-parts/content', 'intro' );
+            }
+        ?>
+    </div>
+		</div>
 <?php get_footer(); ?>

@@ -67,4 +67,5 @@ html {
 body {
   color: var(--secondary);
   overflow-x: hidden;
+  background-color: white;
 }
