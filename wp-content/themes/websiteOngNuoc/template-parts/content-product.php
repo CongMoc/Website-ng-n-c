@@ -1,6 +1,6 @@
 <section class="product-search">
     <h2>Sản phẩm có thể bạn cần tìm kiếm:</h2>
-    <p>các phụ kiện ngành nước có thể bạn đang tìm kiếm:</p>
+    <p>Các phụ kiện ngành nước có thể bạn đang tìm kiếm:</p>
     <div class="list-products-search">
         <div class="product-rating">
             <?php

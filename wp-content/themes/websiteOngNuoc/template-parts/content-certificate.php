@@ -1,5 +1,5 @@
 <section class="certificate" style="background-image: url(<?php
-                                                            $image_url = get_asset_image_url('background-contact.png');
+                                                            $image_url = get_asset_image_url('background-certificate.png');
                                                             if ($image_url) {
                                                                 echo esc_url($image_url);
                                                             }
