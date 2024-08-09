@@ -32,10 +32,11 @@
 						$logo = wp_get_attachment_image_src($custom_logo_id);
 					}
 				?>
+                <a href="<?php bloginfo('url');?>">
                 <img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo">
-
+                </a>
             </div>
-            <ul class="nav-links">
+            <!-- <ul class="nav-links">
                 <li><a href="" style="font-weight: bold;">Trang chủ</a></li>
                 <li><a href="#">Giới thiệu</a></li>
                 <li class="dropdown">
@@ -49,6 +50,17 @@
                 <li><a href="#">Tin tức</a></li>
                 <li><a href="#">Liên hệ</a></li>
             </ul>
+            <div class="call-button">
+                <a href="#">Gọi điện</a>
+            </div> -->
+            <?php 
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'header',
+                        'menu_class' => 'nav-links',
+                    )
+                )
+            ?>
             <div class="call-button">
                 <a href="#">Gọi điện</a>
             </div>

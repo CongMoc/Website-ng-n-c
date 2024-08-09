@@ -57,6 +57,7 @@ WebsiteOngNuoc is distributed under the terms of the GNU GPL.
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {

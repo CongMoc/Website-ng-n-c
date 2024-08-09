@@ -171,5 +171,7 @@
             <button>Xem giá</button>
         </div>
     </div>
-    <button>Tìm kiếm thêm</button>
+    <!-- <form method="post"><button type="submit" name="category">Tìm kiếm thêm</button> -->
+    <a href="<?php the_permalink(); ?>">Tìm kiếm thêm</a>
+
 </section>

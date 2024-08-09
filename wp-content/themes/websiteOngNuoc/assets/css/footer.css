@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
   background-color: #141933;
   color: #fff;
   padding: 40px 0;
@@ -10,19 +11,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 13%;
   width: 100%;
   padding: 0 15%;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 200px;
   margin-bottom: 20px;
+  padding-top: 2%;
 }
 
-.footer-section img {
-  width: 120px;
-  height: 100px;
+.company-info img {
+  width: 100px;
+  height: 80px;
   background-repeat:no-repeat;
   background-size: cover;
   margin-bottom: 5%;
@@ -37,33 +39,60 @@
   margin-bottom: 20px;
 }
 
-.company-info 
+.company-info {
+  width: 30%;
+  color: #aaa;
+}
+
+.company-info h2 {
+  margin-top: 5%;
+  font-size: 16px;
+  line-height: 26px;
+}
 
 .company-info p {
   margin: 10px 0;
 }
 
+.company-info ul li{
+  width: 100%;
+  margin-left: 5%;
+  padding-right: 10%;
+  line-height: 26px;
+}
+
 .social-icons {
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  column-gap: 2%;
+  align-items: left;
 }
 
 .social-icons a {
   color: #293c57;
   margin-right: 10px;
-  font-size: 18px;
+  font-size: 24px;
   text-decoration: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #aaa;
 }
 
 .social-icons i {
-  margin-top: 3px;
+  margin: 3px;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  color: #293c57;
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 
 .links h4 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .links ul {

@@ -9,19 +9,18 @@
 
 <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section company-info">
+            <div class="company-info">
                 <?php
                 $image_url = get_asset_image_url('logo_footer.png');
                 if ($image_url) {
                     echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
                 }
                 ?>
-                <p>CÔNG TY TNHH XÂY DỰNG VÀ DỊCH VỤ AQ</p>
-                <p>
-                    Địa chỉ: Thôn An Điềm, Xã Định Sơn, Huyện Cẩm Giàng, Tỉnh Hải Dương, Việt Nam
-                </p>
-                    <p>    VPGD: 92 Nguyễn Lương Bằng, TP Hải Dương, Việt Nam
-                </p>
+                <h2>CÔNG TY TNHH XÂY DỰNG VÀ DỊCH VỤ AQ</h2>
+                <ul>
+                    <li>Địa chỉ: Thôn An Điềm, Xã Định Sơn, Huyện Cẩm Giàng, Tỉnh Hải Dương, Việt Nam</li>
+                    <li>VPGD: 92 Nguyễn Lương Bằng, TP Hải Dương,Việt nam</li>
+                </ul>
                 <div class="social-icons">
                     <a href="#"><i class='bx bxl-facebook'></i></a>
                     <a href="#"><i class='bx bxl-youtube'></i></a>
@@ -36,7 +35,7 @@
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Danh mục</a></li>
                     <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Tin tức</a></li>                     
                     <li><a href="#">Liên hệ nhanh</a></li>
                     <li><a href="#">Để lại liên hệ</a></li>
                     <li><a href="#">Điều khoản</a></li>

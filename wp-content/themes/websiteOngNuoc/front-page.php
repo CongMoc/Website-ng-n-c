@@ -1,3 +1,10 @@
+<?php 
+/**
+ * Template Name: Home
+ * 
+ * @package  WebsiteOngNuoc
+ */
+?>
 <?php
 get_header();
 ?>
@@ -17,6 +24,8 @@ get_header();
                 get_template_part('template-parts/content', 'news');
             }
         ?>
+        
     </div>
 </div>
 <?php get_footer(); ?>
+

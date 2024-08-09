@@ -164,8 +164,8 @@
         </div>
     </div>
     <div class="scroll-slideshow">
-        <h1>01</h1>
-        <p>/08</p>
+        <h1 id="index"></h1>
+        <p id="length"></p>
         <?php
             $image_url = get_asset_image_url('prev.png');
             if ($image_url) {
@@ -210,6 +210,8 @@ function showSlides(n) {
     slideIndex = n;
   let slides = document.getElementsByClassName("comment-detail");
   let dots = document.getElementsByClassName("dot");
+  let scroll = document.getElementsByClassName("scroll-slideshow");
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     slides[i].className = "comment-detail";
@@ -250,6 +252,8 @@ function showSlides(n) {
     slides[slideIndex-1].className += " deactivate slide-left";
   }
   dots[slideIndex].className += " active";
+  document.getElementById("index").innerText = "0" + (slideIndex + 1);
+  document.getElementById("length").innerText = "/0" + slides.length;
   console.log(slideIndex);
 }
 </script>

@@ -47,23 +47,36 @@ html {
   font-size: 10px;
 }
 
-.dropdown-content {
+.sub-menu {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -20%;
   background-color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  list-style: none;
+  min-width: 10rem;
 }
 
-.dropdown-content a {
+.sub-menu li {
+  margin: 0;
+}
+
+.sub-menu a {
+  width: 100%;
   display: block;
-  padding: 10px;
+  padding: 10px 30px;
   color: #000;
+  text-align: center;
 }
 
-.dropdown:hover .dropdown-content {
+.sub-menu a:hover {
+  background-color: #293c57;
+  color: white;
+}
+
+.dropdown:hover .sub-menu {
   display: block;
 }
 
