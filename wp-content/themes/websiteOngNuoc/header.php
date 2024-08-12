@@ -9,7 +9,7 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title><?php the_title(); ?></title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

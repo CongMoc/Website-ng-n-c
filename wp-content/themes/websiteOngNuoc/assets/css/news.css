@@ -1,0 +1,393 @@
+.container-news {
+  width: 100%;
+  min-height: 200vh;
+  padding: 0 14%;
+}
+
+.header-news {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.header-news img {
+  height: 100%;
+  background-size: cover;
+}
+
+.header-news h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-left: 6%;
+}
+
+.content-news {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 5% 0;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2%;
+}
+
+.sidebar-news {
+  width: 25%;
+  height: 100%;
+  position: sticky;
+}
+
+.sidebar-header {
+  width: 100%;
+  height: 240px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10%;
+}
+
+.sidebar-header h3 {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10%;
+}
+
+.sidebar-header p {
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.news-outstanding {
+  width: 100%;
+  min-height: 350px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10%;
+}
+
+.news-outstanding li {
+  list-style: none;
+}
+
+.news-outstanding ul li {
+  padding: 10% 0;
+  line-height: 28px;
+  color: black;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.news-outstanding ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.news-outstanding ul li div,
+.news-outstanding ul li time {
+  color: #b9b8b8;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 3%;
+  margin: 8% 0;
+  font-size: 16px;
+  color: black;
+}
+
+.newsletter-form input::placeholder {
+  color: #d9d9d9;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 4%;
+  text-align: center;
+  background-color: white;
+  color: #293c57;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #293c57;
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  font-size: 16px;
+}
+
+.outstanding {
+  width: 75%;
+  margin-left: 5%;
+  padding: 20px;
+  background-color: white;
+}
+
+.outstanding h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 7%;
+}
+
+.list-blog .news-item {
+  width: 100%;
+  display: flex;
+  column-gap: 5%;
+  margin-bottom: 5%;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.outstanding .news-item img {
+  width: 380px;
+}
+
+.content-item p {
+  margin: 5% 0;
+}
+
+.content-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.recent-blog {
+  width: 100%;
+  min-height: 800px;
+}
+
+.recent-blog h2 {
+  text-align: center;
+  font-size: 38px;
+  margin: 5% 0;
+}
+
+.list-blog {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+.list-blog .news-item {
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  align-items: start;
+}
+
+.list-blog .news-item img {
+  width: 8rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.list-blog .news-item h5 {
+  margin-bottom: 15%;
+  font-size: 18px;
+}
+
+.list-blog .news-item p {
+  display: flex;
+  column-gap: 5%;
+  margin: 2% 0;
+}
+
+.news-title {
+  width: 100%;
+  padding: 0 15%;
+  min-height: 250px;
+  align-items: center;
+}
+
+.news-title p {
+  margin: 10% 0 3%;
+}
+
+.news-title h1 {
+  font-size: 38px;
+  padding-right: 10%;
+}
+
+.blog-container {
+  width: 75%;
+  display: block;
+  background-color: white;
+}
+
+.blog-container .blog-detail {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 5%;
+  color: #9e9e9e;
+  line-height: 26px;
+}
+
+.blog-detail .author {
+  display: flex;
+  column-gap: 10%;
+  margin: 0 0 3%;
+}
+
+.blog-detail .author p {
+  width: 30%;
+  display: flex;
+  color: #b9b8b8;
+  column-gap: 5%;
+  margin: 0;
+}
+
+.blog-detail .author h5 {
+  font-size: 18px;
+  display: flex;
+  column-gap: 10%;
+  margin: 0;
+}
+
+.blog-detail img {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.blog-detail p {
+  margin: 2% 0;
+}
+
+.blog-detail h1,
+.blog-detail h2,
+.blog-detail h3,
+.blog-detail h4,
+.blog-detail h5 {
+  margin: 2% 0;
+  color: #31354c;
+}
+
+.blog-detail ul,
+.blog-detail ol {
+  padding: 0 3%;
+}
+
+.blog-comments {
+  margin-top: 5%;
+  width: 100%;
+  padding: 5%;
+}
+
+.comments-section {
+  padding: 5% 20px;
+}
+
+.comment-item {
+  margin-bottom: 20px;
+}
+
+.comment-author-avatar {
+  margin-right: 15px;
+  display: flex;
+  column-gap: 2%;
+}
+
+.comment-author-avatar img {
+  border-radius: 50%;
+}
+
+.comment-author {
+  padding: 5px 0;
+}
+
+.comment-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0 5%;
+}
+.comment-content p {
+  width: 70%;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #636363;
+}
+
+.comment-content a {
+  color: #636363;
+  font-size: 16px;
+  width: 10%;
+  margin-top: 5%;
+}
+
+.comment-reply a:hover {
+  text-decoration: underline;
+}
+
+.comment-reply i {
+  margin-right: 5px;
+}
+
+.comment-form-container {
+  width: 100%;
+  padding: 5%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.comment-notes {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.comment-form-container label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.comment-form-container input[type="text"],
+.comment-form-container input[type="email"],
+.comment-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.comment-form-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.comment-form-container input[type="submit"] {
+  width: 30%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 35%;
+}
+
+.comment-form-container input[type="submit"]:hover {
+  background-color: #333;
+}
+
+.comment-form-container form {
+  margin: 20px 0;
+}

@@ -4,7 +4,7 @@
     padding: 0 14%;
 }
 
-.header-contact {
+.container-contact .header-contact {
     width: 100%;
     height: 500px;
     display: flex;
@@ -15,42 +15,49 @@
 }
 
 
-.header-contact img {
+.container-contact .header-contact img {
     height: 100%;
     background-size: cover;
 }
 
-.header-contact h1 {
+.container-contact .header-contact h1 {
     font-size: 36px;
     text-align: center;
     margin-left: 6%;
 }
 
-.contact-input {
-    width: 60%;
+.container-contact .contact {
+    width: 100%;
     height: 600px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #Fff;
+    border-radius: 10px;
+}
+
+.contact .contact-input {
+    width: 60%;
+    height: 100%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: block;
-    float: left;
     padding: 5%;
-    margin: 5% 0;
     border-radius: 8px;
 }
 
-.contact-input h3 {
+.contact  .contact-input h3 {
     font-size: 24px;
     color: black;
     margin: 1% 0 4%;
 }
 
-.contact-input form {
+.contact  .contact-input form {
     display: block;
     width: 100%;
     height: 90%;
     color: black;
 }
 
-.contact-input input, .contact-input textarea{
+.contact  .contact-input input, .contact-input textarea{
     width: 100%;
     padding: 2%;
     border-radius: 8px;
@@ -58,15 +65,15 @@
     font-size: 16px;
     margin: 1% 0 3%;
 }
-.contact-input label span {
+.contact  .contact-input label span {
     color: red;
 }
 
-.contact-input textarea {
+.contact  .contact-input textarea {
     height: 20%;
 }
 
-.contact-input button {
+.contact  .contact-input button {
     width: 60%;
     margin: 5% 20%;
     padding: 15px 0;
@@ -77,26 +84,107 @@
     border-radius: 8px;
 }
 
-.contact-info {
+.contact .contact-info {
     width: 30%;
-    height: 400px;
+    height: 70%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: block;
-    float: right;
     padding: 4%;
-    margin: 5% 0;
     border-radius: 8px;
     background-color: #293C57;
     color: white;
 }
 
-.contact-info h2 {
+.contact .contact-info h2 {
     text-align: center;
     font-size: 38px;
     margin: 0 0 5%;
 }
 
-.contact-info ul li {
+.contact .contact-info ul li {
     list-style: none;
-    
+    margin: 2% 0;
+    padding: 0 1rem;
+}
+
+.contact .contact-info ul li  h5 {
+    padding: 0 2rem;
+    font-size: 18px;
+}
+
+.contact .contact-info ul li p {
+    margin: 1rem 5px;
+}
+
+.contact .contact-info ul li p i {
+    margin-right: 10px;
+}
+
+.map-company {
+    width: 100%;
+    height: 900px;
+    margin-top: 10%;
+    display: block;
+}
+
+.map-company h2 {
+    text-align: center;
+    font-size: 38px;
+    margin: 0 0 5%;
+    color: black;
+}
+
+.map-company .map {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-company .map img {
+    width: 50%;
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+.location {
+    width: 45%;
+    height: 100%;
+    display: block;
+}
+
+.location-detail {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    padding: 4%;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    margin: 0 0 5%;
+    cursor: pointer;
+}
+
+.map .location-detail img {
+    width: 20%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.location-detail h5 {
+    font-size: 18px;
+    margin-top: 5%;
+    padding-right: 20% ;
+}
+
+.target-active {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.location-detail:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

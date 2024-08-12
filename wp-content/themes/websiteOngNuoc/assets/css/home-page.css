@@ -291,20 +291,20 @@
   padding: 20px;
 }
 
-.product-rating img {
+.list-products-search .product-rating img {
   max-height: 200px;
   width: 100%;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
 }
 
-.product-rating:hover {
+.list-products-search .product-rating:hover {
   transform: scale(1.05);
   transition: 0.75s;
   cursor: pointer;
 }
 
-.product-rating p {
+.list-products-search .product-rating p {
   font-size: 14px;
   line-height: 17px;
   text-align: left;
@@ -312,7 +312,7 @@
   color: #c4c4c4;
 }
 
-.product-rating h5 {
+.list-products-search .product-rating h5 {
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
@@ -329,12 +329,11 @@
   font-size: 12px;
 }
 
-.product-rating hr {
+.list-products-search .product-rating hr {
   color: #dadada;
   margin: 6% 0;
 }
-
-.product-rating button {
+.list-products-search.product-rating button {
   width: 30%;
   padding: 5px;
   border: none;
@@ -345,7 +344,7 @@
   margin: 0;
 }
 
-.product-rating button:hover {
+.list-products-search .product-rating button:hover {
   color: #ffc107;
 }
 

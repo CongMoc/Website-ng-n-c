@@ -17,7 +17,7 @@
 	<img src="<?php the_post_thumbnail_url(''); ?>" alt="<?php  the_title(); ?>" />
 	<a href="<?php the_permalink(); ?>"><h1><?php the_title();?></h1></a>
 	<div>
-		<?php the_excerpt();?>
+		<?php the_content();?>
         <?php comments_template(); ?>
     </div>
 	<?php endwhile; else: endif;  ?>

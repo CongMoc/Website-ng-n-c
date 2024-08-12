@@ -88,8 +88,8 @@
 }
 
 .price-range hr {
-    width: 30%;
-    margin-left: 70%;
+  width: 30%;
+  margin-left: 70%;
 }
 
 .price-inputs {
@@ -126,64 +126,187 @@ input[type="range"] {
   font-size: 14px;
 }
 
-
 .content-products {
-    width: 75%;
+  width: 75%;
 }
 
 .search-bar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
 }
 
 .search-bar-input {
-    width: 30%;
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    display: flex;
-    overflow: hidden;
+  width: 30%;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  display: flex;
+  overflow: hidden;
 }
 .search-bar-input input {
-    border: none;
-    width: 92%;
-    padding: 10px;
+  border: none;
+  width: 92%;
+  padding: 10px;
 }
 .search-bar-input i {
-    font-size: 20px;
-    color: #969696;
-    margin-top: 8px;
+  font-size: 20px;
+  color: #969696;
+  margin-top: 8px;
 }
 
 .search-bar .search-icon {
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .search-bar select {
-    width: 20%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
 }
 
 .search-bar .search-button {
-    padding: 10px 20px;
-    border: 1px solid #293C57;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-    font-weight: bold;
-    width: 15%;
-    color: #293C57;
+  padding: 10px 20px;
+  border: 1px solid #293c57;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: 15%;
+  color: #293c57;
+  margin: 0;
+}
+
+.products-list {
+  padding: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.products-list .product-item {
+  width: calc(33.333% - 20px);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.products-list .product-image img {
+  width: 80%;
+  max-height: 220px;
+  margin:0 10% 15px;
+}
+
+.products-list .product-info {
+  padding: 5px 10px;
+}
+
+.products-list .product-info hr {
+  width: 90%;
+  margin: 2% 5% 5%;
+}
+
+.products-list .product-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.products-list .product-info h3 a {
+  text-decoration: none;
+  color: black;
+}
+
+.products-list .product-info p a {
+  text-decoration: none;
+  color: #969696;
+}
+
+.product-category,
+.product-rating,
+.product-price,
+.product-availability {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.product-location {
+  font-size: 18px;
+  color: #5a5959;
+}
+
+.products-list .product-rating {
+  display: flex;
+  align-items: center;
+  padding: 3% 0;
+  font-size: 18px;
+}
+
+.products-list .product-rating p {
+  margin:1% 30% 0 2%;
+  font-size: 12px;
+}
+
+.products-list .product-rating span {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #969696;
+}
+
+.products-list .product-price {
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-location,
+.product-availability {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #777;
+}
+
+.product-availability {
+  margin: 2% 0;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-price p {
+  background-color: black;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.product-price .product-date {
+  background-color:#e9e9e9;
+  color: #777;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+
+.content-products button {
+  width: 20%;
+  margin: 5% 40%;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color: #293c57;
+  border-radius: 8px;
 }
