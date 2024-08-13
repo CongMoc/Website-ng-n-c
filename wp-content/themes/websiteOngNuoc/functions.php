@@ -7,7 +7,7 @@
 function websiteOngNuoc_register_styles() {
     wp_enqueue_style('websiteOngNuoc-header', get_template_directory_uri() . "/assets/css/header.css", [], '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-styles', get_template_directory_uri() . "/style.css", [], '1.0', 'all' );
-    wp_enqueue_style('websiteOngNuoc-fontawesome', "https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css", array(), '5.13.0', 'all');
+    wp_enqueue_style('websiteOngNuoc-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
     wp_enqueue_style('websiteOngNuoc-footer', get_template_directory_uri() . "/assets/css/footer.css", [], '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-home', get_template_directory_uri() . "/assets/css/home-page.css", [], '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-category', get_template_directory_uri() . "/assets/css/category.css", [], '1.0', 'all' );
@@ -234,3 +234,79 @@ function filter_products() {
 }
 add_action('wp_ajax_filter_products', 'filter_products'); 
 add_action('wp_ajax_nopriv_filter_products', 'filter_products'); 
+
+
+function use_custom_template_for_product($template) {
+    if (is_singular('product')) {
+        global $post;
+        $custom_template = locate_template('category-products-detail.php');
+        
+        if ($custom_template) {
+            return $custom_template;
+        }
+    }
+    
+    return $template;
+}
+add_filter('template_include', 'use_custom_template_for_product');
+
+function custom_product_permalink($permalink, $post) {
+    if ($post->post_type == 'product') {
+        return home_url('/category-products/?product_id=' . $post->ID);
+    }
+    return $permalink;
+}
+add_filter('post_type_link', 'custom_product_permalink', 10, 2);
+
+
+
+function handle_contact_form_submission() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['phone']) && isset($_POST['message'])) {
+        // Lấy dữ liệu từ form
+        $phone = sanitize_text_field($_POST['phone']);
+        $message = sanitize_textarea_field($_POST['message']);
+
+        // Địa chỉ email admin
+        $admin_email = get_option('admin_email');
+
+        // Tiêu đề email
+        $subject = 'Thông tin liên hệ từ khách hàng';
+
+        // Nội dung email
+        $email_message = "Số điện thoại: $phone\n";
+        $email_message .= "Nội dung review:\n$message";
+
+        // Headers
+        $headers = array('Content-Type: text/plain; charset=UTF-8');
+
+        // Gửi email
+        wp_mail($admin_email, $subject, $email_message, $headers);
+
+        // Thông báo thành công
+        echo '<p>Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.</p>';
+    }
+}
+
+// Thêm vào một shortcode để hiển thị form trong trang hoặc bài viết
+function contact_form_shortcode() {
+    ob_start();
+    handle_contact_form_submission();
+    ?>
+    <form id="contact-form" method="POST">
+        <div>
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="message">Nội dung review:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Gửi liên hệ</button>
+    </form>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('contact_form', 'contact_form_shortcode');
+
+
+
