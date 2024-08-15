@@ -1,5 +1,31 @@
 <section class="comments">
     <h2>Khách hàng nói gì về dịch vụ của chúng tôi</h2>
+    <div class="scroll-slideshow service-mobile">
+        <h1 id="index-mobile"></h1>
+        <p id="length-mobile"></p>
+        <?php
+            $image_url = get_asset_image_url('top.png');
+            if ($image_url) {
+                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" onclick="plusSlides(-1)" />';
+            }
+            ?>
+            <?php
+            $image_url = get_asset_image_url('bottom.png');
+            if ($image_url) {
+                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" onclick="plusSlides(1)"/>';
+            }
+            ?>
+        <div class="dots">
+            <span class="dot-mobile active" onclick="currentSlide(0)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(1)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(2)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(3)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(4)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(5)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(6)"></span> 
+            <span class="dot-mobile" onclick="currentSlide(7)"></span> 
+        </div>
+    </div>
     <div class="comments-list">
         <div class="comment-detail" onclick="currentSlide(0)">
             <p>
@@ -163,7 +189,7 @@
             </div>
         </div>
     </div>
-    <div class="scroll-slideshow">
+    <div class="scroll-slideshow service-desktop">
         <h1 id="index"></h1>
         <p id="length"></p>
         <?php
@@ -188,8 +214,6 @@
             <span class="dot" onclick="currentSlide(6)"></span> 
             <span class="dot" onclick="currentSlide(7)"></span> 
         </div>
-        </div>
-        </div>
     </div>
 </section>
 
@@ -210,7 +234,7 @@ function showSlides(n) {
     slideIndex = n;
   let slides = document.getElementsByClassName("comment-detail");
   let dots = document.getElementsByClassName("dot");
-  let scroll = document.getElementsByClassName("scroll-slideshow");
+  let dots_mobile =  document.getElementsByClassName("dot-mobile");
 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -218,6 +242,10 @@ function showSlides(n) {
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  for (i = 0; i < dots_mobile.length; i++) {
+    dots_mobile[i].className = dots_mobile[i].className.replace(" active", "");
   }
 
   if (slideIndex < 0) {
@@ -252,8 +280,10 @@ function showSlides(n) {
     slides[slideIndex-1].className += " deactivate slide-left";
   }
   dots[slideIndex].className += " active";
+  dots_mobile[slideIndex].className += " active";
   document.getElementById("index").innerText = "0" + (slideIndex + 1);
   document.getElementById("length").innerText = "/0" + slides.length;
-  console.log(slideIndex);
+  document.getElementById("index-mobile").innerText = "0" + (slideIndex + 1);
+  document.getElementById("length-mobile").innerText = "/0" + slides.length;
 }
 </script>

@@ -12,14 +12,20 @@
     <div class="posts">
         <section class="about-us">
             <div class="header-about-us">
-                <h1>Giới thiệu về chúng tôi</h1>
+                <h1  class="service-desktop">Giới thiệu về chúng tôi</h1>
                 <!-- <?php
                 $image_url = get_asset_image_url('background-about-us.png');
                 if ($image_url) {
                     echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" onclick="plusSlides(1)"/>';
                 }
                 ?> -->
-                <img src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
+                <img class="service-desktop" src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
+                <?php
+                $image_url = get_asset_image_url('background-about_us.png');
+                if ($image_url) {
+                    echo '<img class="service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" onclick="plusSlides(1)"/>';
+                }
+                ?>
             </div>
         </section>
         <section class="content-about-us">
@@ -159,8 +165,19 @@
                 <p>Chúng tôi cam kết hoạt động có trách nhiệm với xã hội và môi trường, giảm thiểu tác động của chúng tôi lên hành tinh và hỗ trợ các hoạt động bền vững bất cứ khi nào có thể.</p>
                 </div>
         </section>
-        <section class="proud" style="background-image: url(<?php
+        <section class="proud service-desktop" style="background-image: url(<?php
                                                             $image_url = get_asset_image_url('background-proud.jpg');
+                                                            if ($image_url) {
+                                                                echo esc_url($image_url);
+                                                            }
+                                                            ?>">
+            <h1>
+            Tự hào là <span>nhà cung cấp</span> dịch vụ uy tín trong lĩnh vực xây dựng tại Việt Nam.
+            </h1>
+            <a href="<?php bloginfo('url') ?> /contact">Liên hệ ngay</a>
+        </section>
+        <section class="proud service-mobile" style="background-image: url(<?php
+                                                            $image_url = get_asset_image_url('background-about-us2.png');
                                                             if ($image_url) {
                                                                 echo esc_url($image_url);
                                                             }

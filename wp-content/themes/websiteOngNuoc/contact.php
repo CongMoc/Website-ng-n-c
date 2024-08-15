@@ -16,9 +16,17 @@ use Automattic\Jetpack\Forms\ContactForm\Contact_Form;
 
     <div class="container-contact">
             <section class="header-contact">
-                <h1><?php the_title();?></h1>
-                <img src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
+                <h1 class="service-desktop"><?php the_title();?></h1>
+                <img class="service-desktop" src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
+                <?php
+                $image_url = get_asset_image_url('background-contact1.png');
+                if ($image_url) {
+                    echo '<img class="service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                }
+                ?>
+            
             </section>
+
 
             <section class="contact">
                 <div class="contact-input">
@@ -44,18 +52,51 @@ use Automattic\Jetpack\Forms\ContactForm\Contact_Form;
                     <h2>Liên hệ với AQ</h2>
                     <ul>
                         <li>
-                            <p><i class='bx bx-mobile-landscape'></i> Số điện thoại</p>
+                            <p><?php
+                            $image_url = get_asset_image_url('icon_phone.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?> Số điện thoại</p>
                             <h5>123-456-7890</h5>
                         </li>
                         <li>
-                            <p><i class='bx bxs-phone'></i> Hotline</p>
+                            <p><?php
+                            $image_url = get_asset_image_url('icon_phone1.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Hotline</p>
                             <h5>+123-456-7890</h5>
                         </li>
                         <li>
-                            <p><i class='bx bx-envelope' ></i> Địa chỉ email</p>
+                            <p><?php
+                            $image_url = get_asset_image_url('icon_letter.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?> Địa chỉ email</p>
                             <h5>hello@yourwebsite.com</h5>
                         </li>
                     </ul>
+                    <div class="contact-input-mobile">
+                        <h3>Liên hệ chúng tôi</h3>
+                        <form method="post">
+                            <label for="name">
+                                Tên của tôi<span> *</span>
+                            </label>
+                            <input type="text" name="name" id="name" />
+                            <label for="email">
+                                Email<span> *</span>
+                            </label>
+                            <input type="text" name="email" id="email" />
+                            <label for="content-contact">
+                                Nội dung<span> *</span>
+                            </label>
+                            <textarea type="text" name="content-contact" id="content-contact"></textarea>
+                            <button type="submit" name="submit">Liên hệ ngay</button>
+                        </form>
+                    </div>
                 </div>
             </section>
             <section class="map-company">

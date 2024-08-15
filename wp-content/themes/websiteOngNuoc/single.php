@@ -20,15 +20,30 @@
 				?>
             </section>
             <section class="content-news">
-                <div class="sidebar-news">
+                <div class="sidebar-news service-desktop">
                     <div class="sidebar-header">
                         <h3>Chuyên đề nổi bật</h3>
-                        <p><i class='bx bxs-receipt' ></i>Nước sạch</p>
+                        <p><?php
+                                $image_url = get_asset_image_url('icon_paper.png');
+                                if ($image_url) {
+                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                }
+                            ?>Nước sạch</p>
                         <p>
-                        <i class='bx bxs-receipt' ></i>Xây dựng
+                        <?php
+                            $image_url = get_asset_image_url('icon_paper.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Xây dựng
                         </p>
                         <p>
-                        <i class='bx bxs-receipt' ></i>Đô thị
+                        <?php
+                            $image_url = get_asset_image_url('icon_paper.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Đô thị
                         </p>
                     </div>
                     <div class="news-outstanding">
@@ -52,8 +67,16 @@
                     ?>
                         <div class="blog-detail">
                             <div class="author">
-                                <h5><i class='bx bxs-user-circle'></i> <?php the_author(); ?></h5>
-                                <p><i class='bx bxs-time-five'></i> <?php the_time('F j, Y'); ?></p>
+                                <h5><?php
+                                        // Lấy ảnh đại diện của tác giả
+                                        echo get_avatar(get_the_author_meta('ID')); // Kích thước ảnh đại diện 32x32px
+                                    ?><span><?php the_author(); ?></span></h5>
+                                <p><?php
+                                                $image_url = get_asset_image_url('icon_watch.png');
+                                                if ($image_url) {
+                                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                                }
+                                            ?> <span><?php the_time('F j, Y'); ?></span></p>
                             </div>
                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
                             <?php the_content(); ?>
@@ -80,7 +103,12 @@
                                             </div>
                                             <div class="comment-content">
                                                 <p><?php echo $comment->comment_content; ?></p>
-                                                <a href="#reply"><i class='bx bxs-share'></i> Reply</a>
+                                                <a href="#reply"><?php
+                                                $image_url = get_asset_image_url('icon_reply.png');
+                                                if ($image_url) {
+                                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                                }
+                                            ?> Reply</a>
                                             </div>
                                         </div>
                                 <?php
@@ -115,7 +143,7 @@
                         comment_form($comments_args);
                         ?>
                     </div>
-                    <div class="recent-blog">
+                    <div class="recent-blog service-desktop">
                         <h2>Bài viết liên quan</h2>
                         <div class="list-blog">
                                 <?php 
@@ -139,8 +167,16 @@
                                         <img src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
                                         <div class="content-item">
                                             <a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-                                            <p><i class='bx bxs-user-circle'></i> <?php the_author(); ?></p>
-                                            <p><i class='bx bxs-time-five' ></i> <?php the_time('F j, Y'); ?></p>
+                                            <p style="color: #222222;"><?php
+                                                // Lấy ảnh đại diện của tác giả
+                                                echo get_avatar(get_the_author_meta('ID')); // Kích thước ảnh đại diện 32x32px
+                                            ?><span><?php the_author(); ?></p>
+                                            <p> <?php
+                                                $image_url = get_asset_image_url('icon_watch.png');
+                                                if ($image_url) {
+                                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                                }
+                                            ?> <span><?php the_time('F j, Y'); ?></span></p>
                                         </div>
                                     </div>
                                 <?php 

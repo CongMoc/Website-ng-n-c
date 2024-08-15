@@ -7,7 +7,6 @@
 function websiteOngNuoc_register_styles() {
     wp_enqueue_style('websiteOngNuoc-header', get_template_directory_uri() . "/assets/css/header.css", [], '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-styles', get_template_directory_uri() . "/style.css", [], '1.0', 'all' );
-    wp_enqueue_style('websiteOngNuoc-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '5.13.0', 'all');
     wp_enqueue_style('websiteOngNuoc-footer', get_template_directory_uri() . "/assets/css/footer.css", [], '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-home', get_template_directory_uri() . "/assets/css/home-page.css", [], '1.0', 'all' );
     wp_enqueue_style('websiteOngNuoc-category', get_template_directory_uri() . "/assets/css/category.css", [], '1.0', 'all' );
@@ -121,11 +120,36 @@ function load_more_products() {
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <p class="product-category"><?php echo wc_get_product_category_list($product->get_id()); ?></p>
                     <div class="product-rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
                         <p>4.8/5</p>
                         <?php 
                             echo wc_get_rating_html($product->get_average_rating()); 
@@ -134,7 +158,12 @@ function load_more_products() {
                     </div>
                     <hr />
                     <div class="product-location">
-                        <p><i class='bx bxs-location-plus'></i> Hải Phòng, Hà Nội</p>
+                        <p><?php
+                            $image_url = get_asset_image_url('icon_location.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?> Hải Phòng, Hà Nội</p>
                     </div>
                     <div class="product-availability">
                         <p>Mức giá bán lẻ</p>
@@ -199,11 +228,36 @@ function filter_products() {
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <p class="product-category"><?php echo wc_get_product_category_list($product->get_id()); ?></p>
                     <div class="product-rating">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
+                        <?php
+                            $image_url = get_asset_image_url('icon_rating.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>
                         <p>4.8/5</p>
                         <?php 
                             echo wc_get_rating_html($product->get_average_rating()); 
@@ -212,7 +266,12 @@ function filter_products() {
                     </div>
                     <hr />
                     <div class="product-location">
-                        <p><i class='bx bxs-location-plus'></i> Hải Phòng, Hà Nội</p>
+                        <p><?php
+                            $image_url = get_asset_image_url('icon_location.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?> Hải Phòng, Hà Nội</p>
                     </div>
                     <div class="product-availability">
                         <p>Mức giá bán lẻ</p>
@@ -260,53 +319,111 @@ add_filter('post_type_link', 'custom_product_permalink', 10, 2);
 
 
 
-function handle_contact_form_submission() {
+function handle_message_form_submission() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['phone']) && isset($_POST['message'])) {
-        // Lấy dữ liệu từ form
         $phone = sanitize_text_field($_POST['phone']);
         $message = sanitize_textarea_field($_POST['message']);
 
-        // Địa chỉ email admin
+        // Admin email address
         $admin_email = get_option('admin_email');
 
-        // Tiêu đề email
+        // Email subject
         $subject = 'Thông tin liên hệ từ khách hàng';
 
-        // Nội dung email
-        $email_message = "Số điện thoại: $phone\n";
-        $email_message .= "Nội dung review:\n$message";
+        // Email content
+        $email_message = "Số điện thoại: $phone\nNội dung review:\n$message";
 
         // Headers
         $headers = array('Content-Type: text/plain; charset=UTF-8');
 
-        // Gửi email
         wp_mail($admin_email, $subject, $email_message, $headers);
 
-        // Thông báo thành công
-        echo '<p>Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.</p>';
+        echo '<p>Cảm ơn bạn đã gửi review! Chúng tôi sẽ phản hồi sớm nhất có thể.</p>';
     }
 }
+
+function handle_name_form_submission() {
+    if ($_SERVER['REQUEST_URI'] === 'POST' && isset($_POST['phone']) && isset($_POST['name'])) {
+        $phone = sanitize_text_field($_POST['phone']);
+        $name = sanitize_textarea_field($_POST['name']);
+
+        // Admin email address
+        $admin_email = get_option('admin_email');
+
+        // Email subject
+        $subject = 'Thông tin liên hệ từ khách hàng';
+
+        // Email content
+        $email_message = "Tên khách hàng: $name\nSố điện thoại: $phone";
+
+        // Headers
+        $headers = array('Content-Type: text/plain; charset=UTF-8');
+
+        wp_mail($admin_email, $subject, $email_message, $headers);
+
+        echo '<p>Cảm ơn ' .$name. ' đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.</p>';
+    }
+}
+
 
 // Thêm vào một shortcode để hiển thị form trong trang hoặc bài viết
 function contact_form_shortcode() {
     ob_start();
-    handle_contact_form_submission();
+    handle_message_form_submission();
     ?>
     <form id="contact-form" method="POST">
-        <div>
-            <label for="phone">Số điện thoại:</label>
-            <input type="text" id="phone" name="phone" required>
-        </div>
-        <div>
-            <label for="message">Nội dung review:</label>
-            <textarea id="message" name="message" required></textarea>
-        </div>
+        <label for="phone">Số điện thoại*</label>
+        <input type="text" id="phone" name="phone" required>
+        <label for="message">Nội dung reviews*</label>
+        <textarea id="message" name="message" required></textarea>
         <button type="submit">Gửi liên hệ</button>
     </form>
     <?php
     return ob_get_clean();
 }
 add_shortcode('contact_form', 'contact_form_shortcode');
+
+
+
+function contact_form_shortcode_name() {
+    ob_start();
+    handle_name_form_submission();
+    ?>
+    <form id="contact-name" method="POST" class="form-contact" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
+        <h1>Liên hệ tư vấn</h1>
+        <p>Để lại địa chỉ liên hệ của bạn để chúng tôi liên hệ và 
+           sẵn sàng giải đáp các thắc mắc của bạn liên quan tới các 
+           dịch vụ và sản phẩm sản xuất:</p>
+        <input type="text" placeholder="Tên" id="name" name="name" required/>
+        <input type="text" placeholder="Số điện thoại của bạn" id="phone" name="phone" required/>
+        <button type="submit">Gửi liên hệ</button>
+    </form>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('contact_name', 'contact_form_shortcode_name');
+
+
+
+function ajax_add_to_cart() {
+    $product_id = intval($_POST['product_id']);
+
+    if ($product_id) {
+        $added = WC()->cart->add_to_cart($product_id);
+
+        if ($added) {
+            wp_send_json_success();
+        } else {
+            wp_send_json_error('Could not add product to cart.');
+        }
+    } else {
+        wp_send_json_error('Invalid product ID.');
+    }
+}
+
+add_action('wp_ajax_add_to_cart', 'ajax_add_to_cart');
+add_action('wp_ajax_nopriv_add_to_cart', 'ajax_add_to_cart');
+
 
 
 

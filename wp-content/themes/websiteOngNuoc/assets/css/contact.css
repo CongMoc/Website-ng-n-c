@@ -44,20 +44,21 @@
     border-radius: 8px;
 }
 
-.contact  .contact-input h3 {
+.contact  .contact-input h3, .contact .contact-input-mobile h3{
     font-size: 24px;
     color: black;
     margin: 1% 0 4%;
 }
 
-.contact  .contact-input form {
+.contact  .contact-input form, .contact .contact-input-mobile form {
     display: block;
     width: 100%;
     height: 90%;
     color: black;
 }
 
-.contact  .contact-input input, .contact-input textarea{
+.contact  .contact-input input, .contact-input textarea,
+.contact-input-mobile textarea, .contact .contact-input-mobile input{
     width: 100%;
     padding: 2%;
     border-radius: 8px;
@@ -65,15 +66,18 @@
     font-size: 16px;
     margin: 1% 0 3%;
 }
-.contact  .contact-input label span {
+.contact  .contact-input label span, 
+.contact  .contact-input-mobile label span {
     color: red;
 }
 
-.contact  .contact-input textarea {
+.contact  .contact-input textarea, 
+.contact  .contact-input-mobile textarea {
     height: 20%;
 }
 
-.contact  .contact-input button {
+.contact  .contact-input button,
+.contact  .contact-input-mobile button {
     width: 60%;
     margin: 5% 20%;
     padding: 15px 0;
@@ -81,6 +85,15 @@
     background-color: #293C57;
     color: white;
     border: none;
+    border-radius: 8px;
+}
+
+.contact-input-mobile {
+    width: 60%;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 5%;
     border-radius: 8px;
 }
 
@@ -108,13 +121,19 @@
 }
 
 .contact .contact-info ul li  h5 {
-    padding: 0 2rem;
+    padding: 0 2.5rem;
     font-size: 18px;
 }
 
 .contact .contact-info ul li p {
-    margin: 1rem 5px;
+    margin: 10px 5px;
+    display: flex;
+    column-gap: 5%;
+    position: static;
+    padding: 0;
 }
+
+.contact .contact-info ul li p
 
 .contact .contact-info ul li p i {
     margin-right: 10px;
@@ -187,4 +206,81 @@
     transition: 0.5s;
     border: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.service-desktop {
+    display: block;
+}
+
+.service-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-contact {
+        padding: 0 5%;
+    }
+    .container-contact .contact  {
+        display: block;
+    }
+
+    .contact .contact-input {
+       display: none;
+    }
+
+    .contact .contact-info {
+        width: 100%;
+        position:relative;
+        z-index: 1;
+    }
+
+    .contact-input-mobile {
+        width: 80%;
+        display: block;
+        position: absolute;
+        left: 10%;
+        bottom: -80%;
+        z-index: 100;
+        background-color: white;
+    }
+
+    .contact-input-mobile form {
+        padding: 0;
+        margin: 0;
+    }
+
+    .service-desktop {
+        display: none;
+    }
+    
+    .service-mobile {
+        display: block;
+    }
+
+    .map-company .map {
+        display: block;
+        position: relative;
+    }
+
+    .map-company .map img{
+        width: 100%;
+        position: relative;
+    }
+
+    .map-company .location {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        top: 10%;
+        z-index: 100;
+    }
+
+    .map-company .location .location-detail {
+        background-color: white;
+    }
+
+    .location .location-detail img {
+        width: 25%;
+    }
 }

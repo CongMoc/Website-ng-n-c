@@ -13,18 +13,39 @@
         <div class="container-news">
             <section class="header-news">
                 <h1><?php the_title();?></h1>
-                <img src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
+                <img class="service-desktop" src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
+                <?php
+                $image_url = get_asset_image_url('background-post.png');
+                if ($image_url) {
+                    echo '<img class="service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                }
+                ?>
             </section>
             <section class="content-news">
-                <div class="sidebar-news">
-                    <div class="sidebar-header">
+                <div class="sidebar-news service-desktop">
+                    <div class="sidebar-header ">
                         <h3>Chuyên đề nổi bật</h3>
-                        <p><i class='bx bxs-receipt'></i>Nước sạch</p>
+                        <p><?php
+                                $image_url = get_asset_image_url('icon_paper.png');
+                                if ($image_url) {
+                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                }
+                            ?>Nước sạch</p>
                         <p>
-                        <i class='bx bxs-receipt'></i>Xây dựng
+                        <?php
+                            $image_url = get_asset_image_url('icon_paper.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Xây dựng
                         </p>
                         <p>
-                        <i class='bx bxs-receipt'></i>Đô thị
+                        <?php
+                            $image_url = get_asset_image_url('icon_paper.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Đô thị
                         </p>
                     </div>
                     <div class="news-outstanding">
@@ -59,8 +80,11 @@
                                 ?>
                                 <div class="content-item">
                                     <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-                                    <p><i class='bx bxs-user-circle'></i> <?php the_author(); ?></p>
-                                    <p><?php the_time('F j, Y'); ?></p>
+                                    <p> <?php
+                                        // Lấy ảnh đại diện của tác giả
+                                        echo get_avatar(get_the_author_meta('ID')); // Kích thước ảnh đại diện 32x32px
+                                    ?><span><?php the_author(); ?></span></p>
+                                    <p>Đăng ngày <?php the_time('F j, Y'); ?></p>
                                 </div>
                             </div>
                         <?php 
@@ -71,6 +95,42 @@
                             wp_reset_postdata(); // Reset lại dữ liệu post
                         ?>
                     </div>
+                    <div class="sidebar-news service-mobile">
+                    <div class="sidebar-header ">
+                        <h3>Chuyên đề nổi bật</h3>
+                        <p><?php
+                                $image_url = get_asset_image_url('icon_paper.png');
+                                if ($image_url) {
+                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                }
+                            ?>Nước sạch</p>
+                        <p>
+                        <?php
+                            $image_url = get_asset_image_url('icon_paper.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Xây dựng
+                        </p>
+                        <p>
+                        <?php
+                            $image_url = get_asset_image_url('icon_paper.png');
+                            if ($image_url) {
+                                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                            }
+                        ?>Đô thị
+                        </p>
+                    </div>
+                    <div class="news-outstanding">
+                        <h3>Bài viết nổi bật</h3>
+                        <?php dynamic_sidebar('sidebar-news'); ?>
+                    </div>
+                    <div class="newsletter-form sidebar-header">
+                        <p>Newsletter Sign Up Form</p>
+                        <input type="text" placeholder="Enter your Email Address" />
+                        <button>Subcribe</button>
+                    </div>
+                </div>
                     <div class="recent-blog">
                         <h2>Recent</h2>
                         <div class="list-blog">
@@ -95,8 +155,16 @@
                                         <img src="<?php the_post_thumbnail_url('') ?>" alt="Custom Image" />
                                         <div class="content-item">
                                             <a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-                                            <p><i class='bx bxs-user-circle'></i> <?php the_author(); ?></p>
-                                            <p><i class='bx bxs-time-five' ></i> <?php the_time('F j, Y'); ?></p>
+                                            <p style="color: #222222;"><?php
+                                                // Lấy ảnh đại diện của tác giả
+                                                echo get_avatar(get_the_author_meta('ID')); // Kích thước ảnh đại diện 32x32px
+                                            ?><span><?php the_author(); ?></p>
+                                            <p> <?php
+                                                $image_url = get_asset_image_url('icon_watch.png');
+                                                if ($image_url) {
+                                                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                                                }
+                                            ?> <span><?php the_time('F j, Y'); ?></span></p>
                                         </div>
                                     </div>
                                 <?php 

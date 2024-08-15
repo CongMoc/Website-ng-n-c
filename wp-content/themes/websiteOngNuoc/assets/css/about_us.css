@@ -213,3 +213,72 @@
   transform: scale(1.2);
   transition: 0.5s;
 }
+
+@media only screen and (max-width: 768px) {
+  .content-about-us {
+    display: block;
+    position: relative;
+    padding: 0 5%;
+  }
+
+  .content-about-us img {
+    width: 100%;
+    position: relative;
+  }
+
+  .content-about-us .container-content {
+    position: absolute;
+    z-index: 100;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+  }
+
+  .content-about-us .container-content h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .container-content .content-detail {
+    background-color: white;
+  }
+
+  .target-about-us {
+    width: 100%;
+    padding: 0 5%;
+    height: 1200px;
+  }
+
+  .target-content {
+    padding: 0 20%;
+    background-position: center;
+    background-size: cover;
+    grid-template-columns: repeat(1, minmax(100%, 2fr));
+  }
+
+
+  .target-detail {
+    margin-top: 15%;
+  }
+
+  .value-company {
+    padding: 0 5%;
+  }
+
+  .value-content {
+    grid-template-columns: repeat(1, minmax(80%, 2fr));
+    padding: 40px;
+  }
+
+  .value-detail:not(.value-detail p) {
+    text-align: left;
+  }
+
+  .proud {
+    background-size: contain;
+  }
+
+  .proud h1 {
+    font-size: 30px;
+  }
+}

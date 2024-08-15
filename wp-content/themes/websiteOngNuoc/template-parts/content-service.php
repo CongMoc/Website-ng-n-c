@@ -12,7 +12,14 @@
             <?php
             $image_url = get_asset_image_url('service-1.png');
             if ($image_url) {
-                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                echo '<img class="service-desktop" src="' . esc_url($image_url) . '" alt="Custom Image" />';
+            }
+            ?>
+
+            <?php
+            $image_url = get_asset_image_url('service-1-1.png');
+            if ($image_url) {
+                echo '<img class="service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" />';
             }
             ?>
         </div>
@@ -45,10 +52,17 @@
             <p>Đây là các gói dịch vụ bảo trì định kỳ và bảo trì theo yêu cầu cho các hệ thống điện - tự động hóa, thiết
                 bị
                 công nghiệp trong nhà máy.</p>
-            <?php
+                <?php
             $image_url = get_asset_image_url('service-4.png');
             if ($image_url) {
-                echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                echo '<img class="service-desktop" src="' . esc_url($image_url) . '" alt="Custom Image" />';
+            }
+            ?>
+
+            <?php
+            $image_url = get_asset_image_url('service-4-1.png');
+            if ($image_url) {
+                echo '<img class="service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" />';
             }
             ?>
         </div>

@@ -14,7 +14,12 @@
     </p>
     <div class="search-intro">
         <div class="search-intro-input">
-            <i class='bx bx-search'></i>
+            <?php
+                $image_url = get_asset_image_url('icon_search.png');
+                if ($image_url) {
+                    echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+                }
+            ?>
             <input type="text" placeholder="Bạn đang tìm gì?">
         </div>
         <button type="submit">Tìm kiếm</button>

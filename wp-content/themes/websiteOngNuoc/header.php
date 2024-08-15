@@ -27,42 +27,59 @@
         <nav class="navbar">
             <div class="logo">
                 <?php
-					if(function_exists('the_custom_logo')) {
-						$custom_logo_id = get_theme_mod('custom_logo');
-						$logo = wp_get_attachment_image_src($custom_logo_id);
-					}
-				?>
+                    if(function_exists('the_custom_logo')) {
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id);
+                    }
+                ?>
                 <a href="<?php bloginfo('url');?>">
                 <img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo">
                 </a>
             </div>
-            <!-- <ul class="nav-links">
-                <li><a href="" style="font-weight: bold;">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li class="dropdown">
-                    <a href="#">Danh mục <i class='bx bxs-down-arrow'></i></a>
-                    <div class="dropdown-content">
-                        <a href="#">Sản phẩm</a>
-                        <a href="#">Comments của khách hàng khác</a>
-                        <a href="#">Chính sách mua hàng</a>
-                    </div>
-                </li> 
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-            <div class="call-button">
-                <a href="#">Gọi điện</a>
-            </div> -->
+            
             <?php 
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'header',
-                        'menu_class' => 'nav-links',
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'header',
+                                'menu_class' => 'nav-links',
+                            )
+                        )
+                    ?>
+            <div class="burger-menu dropdown" style="background-image: url(<?php
+                $image_url = get_asset_image_url('icon_list.png');
+                if ($image_url) {
+                    echo esc_url($image_url);
+                }
+                ?>">
+
+                <?php 
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'header',
+                            'menu_class' => 'nav-mobile',
+                        )
                     )
-                )
-            ?>
+                ?>
+            </div>
+            
             <div class="call-button">
                 <a href="#">Gọi điện</a>
             </div>
         </nav>
+        <script>
+           function toggleNavMobile() {
+                var navMobile = document.querySelector('.burger-menu .menu-navbar-menus-container');
+                
+                // Kiểm tra nếu display đang là 'none'
+                if (navMobile.style.display === 'none' || navMobile.style.display === '') {
+                    navMobile.style.display = 'block'; // Chuyển thành block nếu đang là none
+                } else {
+                    navMobile.style.display = 'none'; // Ngược lại, ẩn nó đi
+                }
+            }
+
+            // Gắn sự kiện onClick cho một phần tử
+            document.querySelector('.burger-menu').addEventListener('click', toggleNavMobile);
+
+        </script>
     </header>

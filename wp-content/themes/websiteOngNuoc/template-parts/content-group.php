@@ -7,6 +7,6 @@
     <div class="group-detail">
         <h2>Cùng nhau xây dựng các công trình cho tương lai tại Việt Nam bằng những 
             vật liệu, sản phẩm, dịch vụ chất lượng và bền vững của AQ MEP</h2>
-        <button>Theo dõi cộng đồng của chúng tôi</button>
+        <a href="http://localhost/wordpress/news/">Theo dõi cộng đồng của chúng tôi</a>
     </div>
 </section>

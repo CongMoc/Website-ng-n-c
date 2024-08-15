@@ -58,6 +58,14 @@
   padding: 0;
 }
 
+.service-mobile {
+  display: none;
+}
+
+.service-desktop {
+  display: block;
+}
+
 .introduct p {
   width: 50%;
   font-size: 16px;
@@ -84,6 +92,13 @@
   margin-right: 5%;
   border-radius: 6px;
   overflow: hidden;
+}
+
+.search-intro .search-intro-input img {
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 .search-intro-input input {
@@ -174,7 +189,15 @@
   background-color: #f4f6fa;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
 .card h3 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -291,7 +314,14 @@
   padding: 20px;
 }
 
-.list-products-search .product-rating img {
+.list-products-search a {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  color: black;
+}
+
+.list-products-search .product-rating a img {
   max-height: 200px;
   width: 100%;
   border: 1px solid #f7f7f7;
@@ -309,6 +339,9 @@
   line-height: 17px;
   text-align: left;
   margin: 10px 0;
+}
+
+.list-products-search .product-rating p a {
   color: #c4c4c4;
 }
 
@@ -318,30 +351,41 @@
   line-height: 30px;
 }
 
-.rating-product {
-  color: #ffc107;
-  font-size: 14px;
+.list-products-search .rating-product {
+  display: flex;
+  width: 100%;
 }
 
-.rating-product span {
+.list-products-search .rating-product img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.list-products-search .rating-product span {
   color: #c4c4c4;
-  margin: 0 8px;
+  margin: 5px 8px;
   font-size: 12px;
 }
 
 .list-products-search .product-rating hr {
   color: #dadada;
-  margin: 6% 0;
+  margin: 3% 0;
 }
-.list-products-search.product-rating button {
+.list-products-search .product-rating button {
   width: 30%;
   padding: 5px;
   border: none;
-  background-color: #141933;
-  color: white;
   border-radius: 5px;
   cursor: pointer;
   margin: 0;
+  background-color: #141933;
+  color: white;
+}
+
+.list-products-search .product-rating button a {
+  background-color: #141933;
+  color: white;
 }
 
 .list-products-search .product-rating button:hover {
@@ -411,7 +455,7 @@
   margin-top: 5%;
 }
 
-.certificate-event button {
+.certificate-event a {
   width: 20%;
   padding: 10px;
   background: none;
@@ -420,6 +464,8 @@
   cursor: pointer;
   font-size: 16px;
   border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .products-category {
@@ -534,6 +580,15 @@
   position: relative;
 }
 
+.contact p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  word-break: break-all;
+  padding: 20px 5%;
+  color: white;
+}
+
 .form-contact {
   width: 35%;
   height: 80%;
@@ -550,7 +605,10 @@
   color: black;
 }
 
-.form-contact p {
+.contact .form-contact p {
+  position: static;
+  padding: 0;
+  color: #b8b8b8;
   font-size: 18px;
   line-height: 26px;
   margin: 5% 0 10%;
@@ -675,6 +733,16 @@
   height: 5%;
   margin-top: 8%;
   padding: 0 10%;
+  overflow: hidden;
+}
+
+.scroll-slideshow-mobile {
+  display: none;
+  width: 100%;
+  height: 5%;
+  margin-top: 8%;
+  padding: 0 10%;
+  overflow: hidden;
 }
 
 .scroll-slideshow h1 {
@@ -708,7 +776,8 @@
   padding: 15px 0;
 }
 
-.scroll-slideshow .dots .dot {
+.scroll-slideshow .dots .dot,
+.scroll-slideshow .dots .dot-mobile {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -720,7 +789,8 @@
 }
 
 .scroll-slideshow .dots .active,
-.scroll-slideshow .dots .dot:hover {
+.scroll-slideshow .dots .dot:hover,
+.scroll-slideshow .dots .dot-mobile:hover {
   background-color: #293c57;
   width: 18px;
   transform: scale(1.2);
@@ -738,7 +808,7 @@
 }
 
 .group-detail {
-  width:55%;
+  width: 55%;
   height: 70%;
   background-color: white;
   border-radius: 10px;
@@ -756,21 +826,22 @@
   position: relative;
   font-size: 46px;
   color: #293c57;
+  margin-bottom: 8%;
 }
 
-.group-detail button {
+.group-detail a {
   width: 60%;
-  padding: 20px 0;
-  margin-top: 8%;
+  padding: 20px;
   border: none;
   background-color: #293c57;
   color: white;
   font-size: 20px;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.group-detail button:hover {
+.group-detail a:hover {
   transform: scale(1.1);
   transition: 0.7s;
   background-color: #1f2e42;
@@ -778,9 +849,10 @@
 
 .news {
   width: 100%;
-  height: 800px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0 15%;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 .news h2 {
@@ -795,6 +867,7 @@
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
+  margin-bottom: 5%;
 }
 
 .new-detail {
@@ -811,12 +884,21 @@
 }
 
 .new-detail h4 {
-  font-size: 18px;
   margin: 15px 0;
+  text-align: left;
+  line-height: 28px;
+}
+.new-detail h4 a {
+  padding: 0;
+  background-color: white;
+  color: black;
+  margin: 0;
+  box-shadow: none;
+  font-size: 20px;
 }
 
 .new-detail .author {
-  width: 30%;
+  max-width: 50%;
   border: 1px solid #293c57;
   color: #293c57;
   padding: 5px;
@@ -825,8 +907,10 @@
   column-gap: 5px;
 }
 
-.new-detail .author i {
-  font-size: 24px;
+.new-detail .author img {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #293c57;
 }
 
 .new-detail .author span {
@@ -864,9 +948,8 @@
   font-size: 16px;
 }
 
-.news button {
-  width: 20%;
-  padding: 10px 12px;
+.news a {
+  padding: 10px 5%;
   margin: 5% 40%;
   border: none;
   border-radius: 8px;
@@ -874,10 +957,326 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+  text-decoration: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 16px;
 }
 
-.news button:hover {
-  transform: scale(1.1);
-  transition: 0.7s;
-  background-color: #1f2e42;
+@media only screen and (max-width: 768px) {
+  .introduct {
+    padding: 0 5%;
+    display: block;
+  }
+
+  .introduct .left {
+    float: none;
+  }
+
+  .introduct img {
+    float: none;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .introduct h2:not(b) {
+    width: 100%;
+    font-size: 26px;
+    padding-right: 10%;
+  }
+
+  .introduct p {
+    width: 100%;
+    padding: 0;
+  }
+
+  .search-intro {
+    width: 100%;
+  }
+
+  .search-intro .search-intro-input {
+    width: 80%;
+  }
+
+  .recommend_search {
+    width: 100%;
+  }
+
+  .service {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .service h2 {
+    font-size: 26px;
+  }
+
+  .service p {
+    padding: 0;
+  }
+
+  .service-detail {
+    grid-template-columns: repeat(1, minmax(400px, 2fr));
+    padding: 0;
+    margin-top: 3%;
+  }
+
+  .service-desktop {
+    display: none;
+  }
+
+  .service-mobile {
+    display: block;
+  }
+
+  .factory img {
+    width: 180px;
+    height: 165px;
+    bottom: -15%;
+  }
+
+  .factory p {
+    margin-bottom: 20%;
+  }
+
+  .card h3 {
+    padding-right: 0;
+    font-size: 16px;
+  }
+
+  .robot img {
+    width: 130px;
+    height: 160px;
+  }
+
+  .robot p {
+    padding-right: 30%;
+  }
+
+  .tool img {
+    right: -10%;
+    bottom: -10%;
+  }
+
+  .tool p {
+    padding-right: 50%;
+  }
+
+  .tool h3 {
+    padding-right: 10%;
+  }
+
+  .enginee img {
+    bottom: -30%;
+  }
+
+  .enginee p {
+    margin-bottom: 25%;
+    padding-right: 20%;
+  }
+
+  .product-search h2 {
+    font-size: 24px;
+    line-height: 33px;
+    padding: 0 10%;
+  }
+
+  .product-search p {
+    padding: 0 5%;
+  }
+
+  .product-search {
+    padding: 0 10%;
+  }
+
+  .list-products-search {
+    grid-template-columns: repeat(1, minmax(100%, 2fr));
+    padding: 0;
+    margin-top: 3%;
+  }
+
+  .product-search a:not(.product-rating a) {
+    margin: 5% 30% 2%;
+  }
+
+  .list-products-search .product-rating p {
+    padding: 0;
+  }
+
+  .certificate {
+    background-image: url("http://localhost/wordpress/wp-content/themes/websiteOngNuoc/assets/images/background-certificate1.png") !important;
+    width: 100%;
+    padding: 0 5%;
+    margin: 10% 5%;
+    background-size: contain;
+    display: block;
+  }
+
+  .panner-company {
+    width: 100%;
+    padding: 0;
+  }
+
+  .company-image {
+    width: 150px;
+    top: -8%;
+  }
+
+  .icon-company {
+    top: 0%;
+    left: 60%;
+  }
+
+  .certificate-image {
+    width: 120px;
+    top: 65%;
+  }
+
+  .certificate-content {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    padding: 0;
+  }
+
+  .certificate-content h2 {
+    font-size: 24px;
+  }
+
+  .certificate-event {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  .certificate-event a {
+    padding: 10px 20px;
+  }
+
+  .products-category h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .products-category-list {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(100%, 2fr));
+    padding: 0;
+    margin: 3% 0;
+  }
+
+  .benefit h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .benefit-list {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(100%, 2fr));
+    padding: 0;
+    margin: 3% 0;
+  }
+
+  .contact {
+    margin-bottom: 400px;
+  }
+
+  .contact form {
+    width: 90%;
+    height: 60%;
+    top: 80%;
+    right: 0;
+    margin: 0 5%;
+    padding: 5% 10%;
+  }
+
+  .contact form h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .contact form p {
+    font-size: 14px;
+  }
+
+  .comments {
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .comments h2 {
+    font-size: 24px;
+    text-align: center;
+    padding: 5% 10%;
+  }
+
+  .scroll-slideshow {
+    height: 12%;
+  }
+
+  .scroll-slideshow .dots {
+    width: 30%;
+  }
+
+  .scroll-slideshow .dots .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .comments-list {
+    height: 60%;
+  }
+
+  .comment-detail {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .activate {
+    position: relative;
+    top: 10%;
+    left: 0;
+  }
+
+  .slide-left,
+  .slide-right {
+    top: 10%;
+  }
+
+  .group-detail {
+    width: 90%;
+    margin: 0 5%;
+    top: 20%;
+    right: 0;
+    padding: 10% 5%;
+  }
+
+  .group-detail h2 {
+    font-size: 32px;
+    margin-bottom: 100px;
+    padding-right: 10%;
+  }
+
+  .news {
+    min-height: 800px;
+    margin: 10% 0;
+  }
+
+  .news h2 {
+    font-size: 24px;
+  }
+
+  .news-list {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(100%, 2fr));
+    padding: 0;
+    margin: 5% 0;
+  }
+
+  .news a {
+    margin: 0;
+  }
+
+  .new-detail .author {
+    max-width: 70%;
+  }
 }

@@ -64,6 +64,11 @@
   column-gap: 10px;
 }
 
+.sidebar-header p img {
+  width: 20px;
+  height: 20px;
+}
+
 .news-outstanding {
   width: 100%;
   min-height: 350px;
@@ -73,8 +78,13 @@
   padding: 10%;
 }
 
+.news-outstanding h3 {
+  color: black;
+}
+
 .news-outstanding li {
   list-style: none;
+  color: black;
 }
 
 .news-outstanding ul li {
@@ -140,7 +150,7 @@
   margin-bottom: 7%;
 }
 
-.list-blog .news-item {
+.list-blog .news-item, .list-news .news-item {
   width: 100%;
   display: flex;
   column-gap: 5%;
@@ -157,8 +167,19 @@
 
 .content-item p {
   margin: 5% 0;
+  display: flex;
 }
 
+.outstanding .content-item p img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 5px 10px;
+}
+
+.outstanding .content-item p span {
+  margin: 10px 2px;
+}
 .content-item a {
   text-decoration: none;
   color: black;
@@ -204,8 +225,12 @@
 
 .list-blog .news-item p {
   display: flex;
-  column-gap: 5%;
-  margin: 2% 0;
+  margin: 1% 0;
+  column-gap: 2%;
+}
+
+.list-blog .news-item p span {
+  margin: 5px 0;
 }
 
 .news-title {
@@ -255,8 +280,15 @@
 .blog-detail .author h5 {
   font-size: 18px;
   display: flex;
-  column-gap: 10%;
+  column-gap: 5%;
   margin: 0;
+}
+
+.blog-detail .author img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
 }
 
 .blog-detail img {
@@ -287,6 +319,14 @@
   margin-top: 5%;
   width: 100%;
   padding: 5%;
+}
+
+
+.list-blog .news-item .content-item img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
 }
 
 .comments-section {
@@ -390,4 +430,70 @@
 
 .comment-form-container form {
   margin: 20px 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container-news {
+    padding: 0;
+  }
+  .header-news {
+    background-color: white;
+  }
+
+  .header-news h1{
+    display: none;
+  }
+
+  .header-news img {
+    width: 90%;
+    background-color: cover;
+    margin: 0 5%;
+  }
+
+  .content-news {
+    display: block;
+  }
+
+  .outstanding {
+    width: 100%;
+    margin: 0;
+  }
+
+  .list-news .news-item {
+    display: block;
+  }
+
+  .outstanding .news-item img {
+    width: 100%;
+  }
+
+  .sidebar-news {
+    width: 100%;
+  }
+
+  .newsletter-form {
+    padding: 5% !important;
+  }
+
+  .newsletter-form input {
+    margin: 3% 0;
+  }
+
+  .list-blog {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+  .list-blog .news-item img {
+    width: 30%;
+    height: 150px;
+    background-size: contain;
+  }
+
+  .list-blog .news-item h5 {
+    margin-bottom: 5%;
+  }
+
+  .blog-container {
+    width: 100%;
+  }
 }
