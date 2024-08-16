@@ -1106,7 +1106,7 @@
     width: 100%;
     padding: 0 5%;
     margin: 10% 5%;
-    background-size: contain;
+    background-size: cover;
     display: block;
   }
 
@@ -1279,4 +1279,39 @@
   .new-detail .author {
     max-width: 70%;
   }
+
+  .logo-contact {
+    width: 100%;
+    padding: 10px 5%;
+    position: relative;   
+  }
+
+  .list-logo-contact {
+    width: 80%;
+    margin: 0 10%;
+    overflow: hidden;
+  }
+
+  .logo-contact .list-logo-contact img {
+    width: 300%;
+    height: 170px;
+    transition: 0.5s;
+  }
+
+  .logo-contact .next,.logo-contact .prev {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 40%;
+    z-index: 1000;
+  }
+
+  .logo-contact .prev {
+    left: 5%;
+  }
+
+  .logo-contact .next { 
+    right: 5%;
+  }
+
 }

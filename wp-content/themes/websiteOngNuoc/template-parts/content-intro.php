@@ -32,10 +32,48 @@
     </div>  
 </section>
 <section class="logo-contact">
+    <div class="list-logo-contact">
+        <?php
+            $image_url = get_asset_image_url('logos_contact.png');
+            if ($image_url) {
+                echo '<img class="slideshow-logo" src="' . esc_url($image_url) . '" alt="Custom Image" />';
+            }
+        ?>
+
+    </div>
     <?php
-        $image_url = get_asset_image_url('logos_contact.png');
+        $image_url = get_asset_image_url('icon_prev.png');
         if ($image_url) {
-            echo '<img src="' . esc_url($image_url) . '" alt="Custom Image" />';
+            echo '<img class="prev service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" />';
+        }
+    ?>
+    <?php
+        $image_url = get_asset_image_url('icon_next.png');
+        if ($image_url) {
+            echo '<img class="next service-mobile" src="' . esc_url($image_url) . '" alt="Custom Image" />';
         }
     ?>
 </section>
+<script>
+    let currentPosition = 0;  // Vị trí ban đầu
+    const totalSlides = 2;    // Số lần chuyển slide (ví dụ: chuyển 2 phần một lúc)
+    const slideshow = document.querySelector('.slideshow-logo');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+
+    nextBtn.addEventListener('click', () => {
+    currentPosition = Math.min(currentPosition + 2, totalSlides * 2 - 2); // Mỗi lần chuyển 2 phần
+    updateSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+    currentPosition = Math.max(currentPosition - 2, 0);
+    updateSlide();
+    });
+
+    function updateSlide() {
+    slideshow.style.transform = `translateX(-${(currentPosition / (totalSlides * 2)) * 100}%)`;
+    }
+
+
+</script>
